@@ -33,7 +33,6 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const npm_config_noproxy: string;
 	export const HOME: string;
-	export const OLDPWD: string;
 	export const npm_package_json: string;
 	export const NVM_SYMLINK_CURRENT: string;
 	export const PIPX_BIN_DIR: string;
@@ -55,8 +54,8 @@ declare module '$env/static/private' {
 	export const NODE: string;
 	export const npm_package_name: string;
 	export const npm_lifecycle_script: string;
-	export const npm_package_version: string;
 	export const npm_lifecycle_event: string;
+	export const npm_package_version: string;
 	export const PYTHON_VERSION: string;
 	export const DAYTONA_USER_HOME_AS_WORKDIR: string;
 	export const DAYTONA_SANDBOX_SNAPSHOT: string;
@@ -68,7 +67,6 @@ declare module '$env/static/private' {
 	export const npm_command: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
-	export const NODE_ENV: string;
 }
 
 /**
@@ -105,7 +103,6 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		npm_config_noproxy: string;
 		HOME: string;
-		OLDPWD: string;
 		npm_package_json: string;
 		NVM_SYMLINK_CURRENT: string;
 		PIPX_BIN_DIR: string;
@@ -127,8 +124,8 @@ declare module '$env/dynamic/private' {
 		NODE: string;
 		npm_package_name: string;
 		npm_lifecycle_script: string;
-		npm_package_version: string;
 		npm_lifecycle_event: string;
+		npm_package_version: string;
 		PYTHON_VERSION: string;
 		DAYTONA_USER_HOME_AS_WORKDIR: string;
 		DAYTONA_SANDBOX_SNAPSHOT: string;
@@ -140,7 +137,6 @@ declare module '$env/dynamic/private' {
 		npm_command: string;
 		INIT_CWD: string;
 		EDITOR: string;
-		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
