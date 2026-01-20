@@ -1,59 +1,19 @@
-<script lang="ts">
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcomeFallback from '$lib/images/svelte-welcome.png';
+<script lang='ts'>
+let num1: number = 0;
+let num2: number = 0;
+let result: number = 0;
+function add() { result = num1 + num2; }
+function subtract() { result = num1 - num2; }
+function multiply() { result = num1 * num2; }
+function divide() { result = num2 !== 0 ? num1 / num2 : 0; }
 </script>
-
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+<main>
+  <h1>Simple Calculator</h1>
+  <input type='number' bind:value={num1} placeholder='Number 1' />
+  <input type='number' bind:value={num2} placeholder='Number 2' />
+  <button on:click={add}>+</button>
+  <button on:click={subtract}>-</button>
+  <button on:click={multiply}>*</button>
+  <button on:click={divide}>/</button>
+  <h2>Result: {result}</h2>
+</main>
