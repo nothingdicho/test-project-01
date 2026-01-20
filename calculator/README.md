@@ -10,3 +10,4 @@ This is a simple calculator built with SvelteKit and TypeScript.
    
 3. Run the development server:
    
+This is a simple calculator built with SvelteKit and TypeScript. It supports basic operations such as addition, subtraction, multiplication, and division.
