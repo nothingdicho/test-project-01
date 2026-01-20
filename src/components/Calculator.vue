@@ -12,3 +12,37 @@
     <div class="result">Result: {{ result }}</div>
   </div>
 </template>
+ <script>
+export default {
+  data() {
+    return {
+      number1: 0,
+      number2: 0,
+      result: 0
+    };
+  },
+  methods: {
+    add() {
+      this.result = this.number1 + this.number2;
+    },
+    subtract() {
+      this.result = this.number1 - this.number2;
+    },
+    multiply() {
+      this.result = this.number1 * this.number2;
+    },
+    divide() {
+      if (this.number2 !== 0) {
+        this.result = this.number1 / this.number2;
+      } else {
+        this.result = Error;
+      }
+    },
+    clear() {
+      this.number1 = 0;
+      this.number2 = 0;
+      this.result = 0;
+    }
+  }
+};
+</script>
