@@ -46,3 +46,29 @@ export default {
   }
 };
 </script>
+<style>
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+} 
+input {
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+} 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+} 
+button {
+  padding: 10px;
+  margin: 5px;
+} 
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+} 
+</style>
